@@ -1,0 +1,56 @@
+.Auth {
+  height: 100%;
+  background: #076585;
+  background: linear-gradient(to bottom, #fff, #076585);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Auth__Container {
+  width: 80%;
+  height: 70%;
+}
+
+.Auth__Box {
+  width: 50%;
+  height: 100%;
+  transition: all 0.2s linear;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Auth__Box--signIn {
+  background-color: rgba(119, 48, 154, 0.98);
+}
+
+.Auth__Box--signUp {
+  background-color: rgba(4, 6, 38, 0.98)
+}
+
+.Auth__Box--open {
+  width: 80%;
+}
+
+.Auth__Container--open .Auth__Box:not(.Auth__Box--open) {
+  width: 20%;
+}
+
+.Auth__Container:not(.Auth__Container--open) .Auth__Box:hover {
+  width: 55%;
+}
+
+.Auth__Container:not(.Auth__Container--open):hover .Auth__Box:not(:hover) {
+  width: 45%;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.Auth__Container--open:hover .Auth__Box:not(.Auth__Box--open):hover {
+  width: 25%;
+}
+
+.Auth__Container--open:hover .Auth__Box--open:not(:hover) {
+  width: 75%;
+}
